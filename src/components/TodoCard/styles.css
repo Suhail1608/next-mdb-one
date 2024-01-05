@@ -1,0 +1,15 @@
+.card{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    min-width: 600px;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+.card-buttons{
+    display: flex;
+    gap:20px
+}
