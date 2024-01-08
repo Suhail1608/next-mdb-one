@@ -11,7 +11,7 @@ export async function POST(request:Request){
 }
 
 export async function GET(request:Request) {
-    await connectMongo()
+    await connectMongo(API_URI)
     const users = await Users.find()
     return NextResponse.json({users})
 }

@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
-import { stringify } from "querystring";
 
-const connectMongo = async (uri) =>{
-    try{
-        await mongoose.connect(stringify(uri))
-    }catch(error){
-        console.log(error)
+const connectMongo = async (uri) => {
+    try {
+        await mongoose.connect(uri);
+        // Optionally, you can listen for other events like 'reconnected', 'close', etc.
+
+    } catch (error) {
+        console.error('Error creating MongoDB connection:', error);
     }
 }
-
-export default connectMongo
+export default connectMongo;
