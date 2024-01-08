@@ -1,0 +1,29 @@
+.edit-card{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-width: 600px;
+    background-color: white;
+    gap:20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+label{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+span{
+    display: flex;
+    gap:20px;
+}
+input{
+    border: 1px solid gray;
+    outline: none;
+    color: black;
+    background-color: aliceblue;
+    display: flex;
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
+}

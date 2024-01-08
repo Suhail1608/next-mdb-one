@@ -1,19 +1,19 @@
 import connectMongo from "@/libs/mongodb";
-import Todo from "@/models/todo";
+import Users from "@/models/users";
 import { NextRequest, NextResponse } from "next/server";
-const API_URI = process.env.MONGO_URI
+const API_URI = process.env.USER_URI
 export async function PUT(request:NextRequest, {params}:{params:{id:string}}) {
 
     const {id} = params
-    const {newTitle:title, newDesc:desc} = await request.json()
+    const {newUsername:username, newPassword:password} = await request.json()
     await connectMongo(API_URI)
-    await Todo.findByIdAndUpdate(id, {title,desc})
-    return NextResponse.json({message:"Todo Updated"})
+    await Users.findByIdAndUpdate(id, {username,password})
+    return NextResponse.json({message:"User Updated"})
 
 }
 export async function GET(request:NextRequest, {params}:{params:{id:string}}){
     const {id} = params
     await connectMongo(API_URI)
-    const todo = await Todo.findOne({_id:id})
-    return NextResponse.json({todo})
+    const users = await Users.findOne({_id:id})
+    return NextResponse.json({users})
 }

@@ -116,3 +116,22 @@ a {
   width: 100vw;
  
 }
+
+.post-button-label{
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  margin-bottom: 20px;
+
+}
+.list-box{
+  display: flex;
+
+  gap: 20px;
+}
+.todo-list{
+  min-width: 400px;
+}
+.user-list{
+  min-width: 400px;
+}

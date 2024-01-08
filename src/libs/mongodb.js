@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
+import { stringify } from "querystring";
 
-const connectMongo = async () =>{
+const connectMongo = async (uri) =>{
     try{
-        await mongoose.connect(process.env.MONGO_URI)
+        await mongoose.connect(stringify(uri))
     }catch(error){
         console.log(error)
     }
