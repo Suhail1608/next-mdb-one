@@ -1,4 +1,5 @@
-import mongoose,{Schema} from "mongoose";
+import { userConn } from "@/libs/mongodb";
+import {Schema} from "mongoose";
 
 const usersSchema = new Schema(
     {
@@ -10,7 +11,7 @@ const usersSchema = new Schema(
     }
 )
 
-const Users = mongoose.models.Users || mongoose.model("Users", usersSchema)
+const Users = userConn.models.Users || userConn.model("Users", usersSchema)
 
 export default Users
 export const userschema = usersSchema

@@ -1,4 +1,5 @@
-import mongoose,{Schema} from "mongoose";
+import { todoConn } from "@/libs/mongodb";
+import {Schema} from "mongoose";
 
 const todoSchema = new Schema(
     {
@@ -10,7 +11,7 @@ const todoSchema = new Schema(
     }
 )
 
-const Todo = mongoose.models.Todo || mongoose.model("Todo", todoSchema)
+const Todo = todoConn.models.Todo || todoConn.model("Todo", todoSchema)
 
 export default Todo
 export const todoschema = todoSchema
