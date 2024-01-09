@@ -14,4 +14,3 @@ const todoSchema = new Schema(
 const Todo = todoConn.models.Todo || todoConn.model("Todo", todoSchema)
 
 export default Todo
-export const todoschema = todoSchema

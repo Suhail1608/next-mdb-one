@@ -14,6 +14,6 @@ export async function PUT(request:NextRequest, {params}:{params:{id:string}}) {
 export async function GET(request:NextRequest, {params}:{params:{id:string}}){
     const {id} = params
     await connectMongo(API_URI)
-    const user = await Users.findOne({_id:id})
-    return NextResponse.json({user})
+    const users = await Users.findOne({_id:id})
+    return NextResponse.json({users})
 }

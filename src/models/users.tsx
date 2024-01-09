@@ -14,4 +14,3 @@ const usersSchema = new Schema(
 const Users = userConn.models.Users || userConn.model("Users", usersSchema)
 
 export default Users
-export const userschema = usersSchema
